@@ -5,8 +5,7 @@ import mongoose from "mongoose"
 
 const app = express()
 
-// connect to mlab database
-// make sure to replace my db string & creds with your own
+// connect to the database
 mongoose.connect(process.env.MONGO_CONNECTION)
 mongoose.connection.once('open', () => {
     console.log('conneted to database');
